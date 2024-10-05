@@ -4,7 +4,23 @@ GET http://localhost:3000/ HTTP/1.1
 ###
 GET http://localhost:3000/contacts HTTP/1.1 
 ### 
-GET http://localhost:3000/contacts/64861d6ea2f45b356e0249b7 HTTP/1.1 
+GET http://localhost:3000/contacts/67015097e99bb85143d415e2 HTTP/1.1 
+### 
+POST http://localhost:3000/contacts HTTP/1.1 
+content-type: application/json
+
+{
+"firstName": "Kristina", "lastName": "Loginova", "email": "log53647@byui.edu", "favoriteColor": "orange", "birthday": "1998-07-22"
+}
+### 
+PUT http://localhost:3000/contacts/67015097e99bb85143d415e2 HTTP/1.1 
+content-type: application/json
+
+{
+"firstName": "Michail", "lastName": "Romanov", "email": "rom53647@byui.edu", "favoriteColor": "purple", "birthday": "2001-07-02"
+}
+###
+DELETE http://localhost:3000/contacts/67015097e99bb85143d415e2 HTTP/1.1
 
 # Render
 ### 
@@ -13,3 +29,19 @@ GET https://cse-341-project1-by3b.onrender.com HTTP/1.1
 GET https://cse-341-project1-by3b.onrender.com/contacts HTTP/1.1 
 ### 
 GET https://cse-341-project1-by3b.onrender.com/contacts/64861d6ea2f45b356e0249b7 HTTP/1.1
+### 
+POST http://cse-341-project1-by3b.onrender.com/contacts HTTP/1.1 
+content-type: application/json
+
+{
+"firstName": "Kristina", "lastName": "Loginova", "email": "log53647@byui.edu", "favoriteColor": "orange", "birthday": "1998-07-22"
+}
+### 
+PUT http://cse-341-project1-by3b.onrender.com/contacts/67015097e99bb85143d415e2 HTTP/1.1 
+content-type: application/json
+
+{
+"firstName": "Michail", "lastName": "Romanov", "email": "rom53647@byui.edu", "favoriteColor": "purple", "birthday": "2001-07-02"
+}
+###
+DELETE http://cse-341-project1-by3b.onrender.com/contacts/67015097e99bb85143d415e2 HTTP/1.1
