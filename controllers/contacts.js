@@ -48,7 +48,7 @@ const editContact = async (req, res, next) => {
     };
     const result = await mongodb.getDb().db('cse341').collection('contact').replaceOne({_id: id}, contact);
     if (result.modifiedCount > 0) {
-        console.log(`Contact updated with the following id: ${result.insertedId}`);
+        console.log(`Contact updated with the following id: ${id}`);
         res.status(204).send();
     } else {
         res.status(500).json(result.error || 'Somethng goes wrong');
